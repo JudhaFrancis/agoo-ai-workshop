@@ -51,7 +51,7 @@ export const FloatingElements = ({ scaleX, scrollToSection }: FloatingElementsPr
 
       {/* WhatsApp Button */}
       <a 
-        href="https://wa.me/yourlink" 
+        href="https://wa.me/918903489173" 
         target="_blank" 
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 p-4 bg-emerald-500 text-white rounded-full shadow-2xl hover:bg-emerald-600 hover:scale-110 transition-all duration-300 group"

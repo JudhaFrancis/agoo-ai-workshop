@@ -14,11 +14,11 @@ interface HeroProps {
 
 export const Hero = ({ currentMonth, currentYear, typewriterText, scrollToSection }: HeroProps) => {
   return (
-    <section className="pt-32 pb-20 px-6 overflow-hidden bg-gradient-to-b from-[#FDFCFE] to-[#F5F3FF]">
+    <section id="about" className="relative lg:min-h-screen pt-32 pb-20 px-6 overflow-hidden bg-gradient-to-b from-[#FDFCFE] to-[#F5F3FF] flex flex-col justify-center">
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row items-stretch gap-16">
+        <div className="flex flex-col lg:flex-row items-center gap-16">
           {/* Left Column */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -38,8 +38,8 @@ export const Hero = ({ currentMonth, currentYear, typewriterText, scrollToSectio
             </h1>
 
             <div className="h-12 mb-6">
-               <AnimatePresence mode="wait">
-                <motion.p 
+              <AnimatePresence mode="wait">
+                <motion.p
                   key={typewriterText}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -68,19 +68,17 @@ export const Hero = ({ currentMonth, currentYear, typewriterText, scrollToSectio
           </motion.div>
 
           {/* Right Column: Floating Card */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 50 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex-1 lg:max-w-md w-full flex flex-col"
+            className="flex-1 lg:max-w-md w-full"
           >
-            <Card className="relative p-8 border-2 border-violet-100 shadow-2xl bg-white/95 h-full flex flex-col justify-between">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-violet-600 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">
+            <Card className="relative p-8 border-2 border-violet-100 shadow-2xl bg-white/95">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-violet-600 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg z-20">
                 Highest Rated
               </div>
-              <h3 className="text-xl font-black text-slate-900 mb-6 text-center">Workshop at a Glance</h3>
-              
-              <div className="space-y-4 mb-8">
+              <div className="space-y-3 mb-8">
                 {[
                   { icon: PlayCircle, text: "Live demonstrations with real use cases" },
                   { icon: FileText, text: "Downloadable prompt templates" },
@@ -89,44 +87,35 @@ export const Hero = ({ currentMonth, currentYear, typewriterText, scrollToSectio
                   { icon: Video, text: "Access to workshop recording for 7 days" },
                   { icon: Zap, text: "Exclusive AI tools cheat sheet" }
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4 group">
-                    <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-violet-50 text-violet-600 group-hover:bg-violet-600 group-hover:text-white transition-colors duration-500 flex items-center justify-center shrink-0">
-                      <item.icon className="w-5 h-5" />
-                    </div>
-                    <span className="font-bold text-slate-700 tracking-tight text-sm md:text-base leading-tight">{item.text}</span>
+                  <div key={i} className="flex items-start gap-3">
+                    <item.icon className="w-5 h-5 text-violet-600 shrink-0 mt-0.5" />
+                    <span className="font-bold text-slate-700 tracking-tight text-sm leading-tight">{item.text}</span>
                   </div>
                 ))}
               </div>
 
-              <hr className="mb-6 opacity-50" />
+              <hr className="mb-6 opacity-30" />
 
-              <div className="flex items-end justify-between mb-8">
+              <div className="flex items-center justify-between mb-6">
                 <div>
-                  <span className="text-slate-400 line-through text-lg font-bold">₹999</span>
-                  <div className="text-4xl font-black text-violet-600">₹99</div>
+                  <span className="text-slate-400 line-through text-sm font-bold mr-2">₹199</span>
+                  <span className="text-4xl font-black text-violet-600">₹99</span>
                 </div>
-                <Badge variant="emerald" className="text-lg py-2 px-4">90% OFF</Badge>
+                <Badge variant="emerald" className="bg-emerald-50 text-emerald-600 border-none px-3 py-1 uppercase text-[10px] tracking-wider">90% OFF</Badge>
               </div>
 
-              <div className="mb-8 p-4 bg-red-50 rounded-2xl border border-red-100">
-                <div className="flex justify-between items-center mb-2">
-                   <span className="text-xs font-black text-red-600 uppercase tracking-wider">Only 12 seats left</span>
-                   <span className="text-[10px] font-bold text-slate-500">76% FULL</span>
+              <div className="mb-6 p-3 bg-violet-50/50 rounded-xl border border-violet-100 flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+                  <span className="text-[10px] font-black text-slate-600 uppercase tracking-wider">Only 12 seats left</span>
                 </div>
-                <div className="w-full h-2.5 bg-red-100 rounded-full overflow-hidden">
-                  <motion.div 
-                    initial={{ width: 0 }}
-                    whileInView={{ width: '76%' }}
-                    transition={{ duration: 1, delay: 0.5 }}
-                    className="h-full bg-red-600"
-                  />
-                </div>
+                <span className="text-[10px] font-bold text-violet-600">76% FULL</span>
               </div>
 
-              <Button variant="gradient" size="lg" className="w-full text-xl py-6 rounded-2xl mb-4 group" onClick={() => scrollToSection('pricing')}>
+              <Button variant="gradient" size="lg" className="w-full mb-4 group" onClick={() => scrollToSection('pricing')}>
                 Register Now <ArrowRight className="w-6 h-6 ml-2 group-hover:translate-x-2 transition-transform" />
               </Button>
-              
+
               <div className="flex items-center justify-center gap-2 text-slate-400 text-xs font-bold">
                 <Lock className="w-3 h-3" /> Secure Payment via Razorpay
               </div>

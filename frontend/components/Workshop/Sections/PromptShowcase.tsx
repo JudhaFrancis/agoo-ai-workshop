@@ -26,7 +26,7 @@ const PromptCard = ({ cat, prompt, benefit, theme }: PromptCardProps) => {
         <Badge variant={cat.includes('Email') ? 'blue' : cat.includes('Resume') ? 'indigo' : 'emerald'} className="!bg-slate-800 !text-white border-slate-700">
           {cat}
         </Badge>
-        <button 
+        <button
           onClick={handleCopy}
           className="p-2 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition-colors"
         >
@@ -37,11 +37,11 @@ const PromptCard = ({ cat, prompt, benefit, theme }: PromptCardProps) => {
       <div className="bg-slate-900/50 p-6 rounded-2xl border border-slate-800 mb-6 font-mono text-sm text-slate-300 leading-relaxed min-h-[160px] flex items-center">
         "{prompt}"
       </div>
-      
+
       <div className="inline-flex items-center gap-2 text-sm font-bold opacity-80 group-hover:opacity-100 transition-opacity">
         <span className="text-emerald-500">{benefit}</span>
       </div>
-      
+
       {copied && (
         <div className="absolute top-4 right-4 bg-emerald-500 text-white text-[10px] font-black px-2 py-1 rounded-md animate-bounce">
           Copied! ✓
@@ -53,20 +53,20 @@ const PromptCard = ({ cat, prompt, benefit, theme }: PromptCardProps) => {
 
 export const PromptShowcase = () => {
   const prompts = [
-    { 
-      cat: "Email Writing", 
+    {
+      cat: "Email Writing",
       theme: "border-blue-500 bg-blue-900/10",
       prompt: "You are a professional email writer. Write a follow-up email to [client name] regarding [project]. Tone: polite but assertive. Length: under 120 words. End with a clear CTA.",
       benefit: "✓ Saves 15 minutes per email"
     },
-    { 
-      cat: "Resume & Career", 
+    {
+      cat: "Resume & Career",
       theme: "border-indigo-500 bg-indigo-900/10",
       prompt: "Rewrite this job experience bullet point to be achievement-focused using the STAR method: [paste your bullet]. Add quantifiable results. Keep it under 25 words.",
       benefit: "✓ Professional resume in under 30 minutes"
     },
-    { 
-      cat: "Data Analysis", 
+    {
+      cat: "Data Analysis",
       theme: "border-emerald-500 bg-emerald-900/10",
       prompt: "Here is my sales data for Q1: [paste data]. Summarize key trends, identify the top 3 issues, and suggest 2 actionable next steps. Format as bullet points.",
       benefit: "✓ Instant business insights"
@@ -76,9 +76,9 @@ export const PromptShowcase = () => {
   return (
     <section className="py-24 px-6 bg-slate-900 text-white relative overflow-hidden">
       <div className="container mx-auto">
-         <div className="text-center mb-16 relative z-10">
+        <div className="text-center mb-16 relative z-10">
           <Badge variant="blue" className="mb-4 !bg-blue-600 !text-white border-none">REAL PROMPTS YOU'LL LEARN</Badge>
-          <h2 className="text-3xl md:text-5xl font-black mb-6">Copy-paste ready templates worth ₹999 alone</h2>
+          <h2 className="text-3xl md:text-5xl font-black mb-6">Copy-paste ready templates worth ₹199 alone</h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">

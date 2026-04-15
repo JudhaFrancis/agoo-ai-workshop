@@ -10,21 +10,21 @@ export const Curriculum = () => {
     { time: '0:20–0:45', title: 'Prompt Engineering Deep Dive', desc: 'Frameworks, templates, and live demos to get results the first time.' },
     { time: '0:45–1:10', title: 'Automation Workflows', desc: 'Build your first AI workflow live without writing a single line of code.' },
     { time: '1:10–1:35', title: 'Content & Resume Creation', desc: 'Live resume rewrite demonstration and AI-powered networking tips.' },
-    { time: '1:35–1:50', title: 'Tools Walkthrough', desc: 'Direct comparison between ChatGPT, Claude, and Gemini — which one to use when.' },
-    { time: '1:50–2:00', title: 'Live Q&A + Resource Distribution', desc: 'Get your templates, certificate, and clearing of all remaining doubts.' }
+    { time: '1:35–1:50', title: 'AI Tools Walkthrough & Cheat Sheet', desc: 'Direct comparison of ChatGPT, Claude, and Gemini with our exclusive tools cheat sheet.' },
+    { time: '1:50–2:00', title: 'Live Q&A + Resource Distribution', desc: 'Final Q&A session with the instructor, plus access to prompt templates, certificates, and recordings.' }
   ];
 
   return (
     <section id="curriculum" className="py-24 px-6 bg-white">
       <div className="container mx-auto">
         <div className="text-center mb-20">
-          <Badge variant="blue" className="mb-4">WHAT HAPPENS IN THOSE 2 HOURS</Badge>
+          <Badge variant="violet" className="mb-4">WHAT HAPPENS IN THOSE 2 HOURS</Badge>
           <h2 className="text-3xl md:text-5xl font-black text-slate-900">Workshop Curriculum</h2>
         </div>
 
         <div className="max-w-3xl mx-auto relative group">
           {/* Vertical Line */}
-          <div className="absolute left-[23px] top-0 bottom-0 w-0.5 bg-slate-100 group-hover:bg-blue-100 transition-colors duration-1000" />
+          <div className="absolute left-[23px] top-0 bottom-0 w-0.5 bg-slate-100 group-hover:bg-violet-100 transition-colors duration-1000" />
 
           <div className="space-y-12">
             {items.map((item, i) => (
@@ -35,10 +35,10 @@ export const Curriculum = () => {
                 viewport={{ once: true }}
                 className="relative pl-16 flex flex-col sm:flex-row sm:items-start gap-4"
               >
-                <div className="absolute left-0 top-0 w-12 h-12 rounded-full bg-white border-2 border-blue-600 flex items-center justify-center z-10 shadow-lg group-hover:scale-110 transition-transform">
-                  <div className="w-3 h-3 rounded-full bg-blue-600" />
+                <div className="absolute left-0 top-0 w-12 h-12 rounded-full bg-white border-2 border-violet-600 flex items-center justify-center z-10 shadow-lg group-hover:scale-110 transition-transform">
+                  <div className="w-3 h-3 rounded-full bg-violet-600" />
                 </div>
-                <div className="shrink-0 bg-blue-50 text-blue-700 px-4 py-1.5 rounded-lg text-sm font-black inline-block mt-2">
+                <div className="shrink-0 bg-violet-50 text-violet-700 px-4 py-1.5 rounded-lg text-sm font-black inline-block mt-2">
                   {item.time}
                 </div>
                 <div className="flex-1">

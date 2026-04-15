@@ -7,7 +7,7 @@ export const Button = ({
   className = '', 
   ...props 
 }: any) => {
-  const baseStyles = "inline-flex items-center justify-center font-semibold transition-all duration-300 rounded-full outline-none focus:ring-2 focus:ring-offset-2";
+  const baseStyles = "inline-flex items-center justify-center font-semibold transition-all duration-300 rounded-full outline-none";
   
   const variants: any = {
     primary: "bg-violet-600 text-white hover:bg-violet-700 shadow-lg shadow-violet-500/25 hover:scale-[1.02] active:scale-[0.98]",
@@ -37,7 +37,7 @@ export const Button = ({
 export const Card = ({ children, className = '', hoverEffect = true }: any) => {
   return (
     <div className={`
-      bg-white/80 backdrop-blur-md border border-slate-200 rounded-2xl overflow-hidden
+      bg-white/80 backdrop-blur-md border border-slate-200 rounded-2xl
       ${hoverEffect ? 'hover:shadow-xl hover:translate-y-[-4px] hover:border-violet-500/30 transition-all duration-300' : 'shadow-md'}
       ${className}
     `}>

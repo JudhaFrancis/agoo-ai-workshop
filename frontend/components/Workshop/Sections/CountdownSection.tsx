@@ -17,11 +17,11 @@ export const CountdownSection = ({ timeLeft }: CountdownSectionProps) => {
   return (
     <section className="py-20 bg-gradient-to-r from-violet-700 via-violet-800 to-cyan-900 border-y border-white/10 relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
-        {[1,2,3,4].map(i => (
-          <motion.div 
+        {[1, 2, 3, 4].map(i => (
+          <motion.div
             key={i}
             animate={{ rotate: 360 }}
-            transition={{ duration: 20 + i*5, repeat: Infinity, ease: 'linear' }}
+            transition={{ duration: 20 + i * 5, repeat: Infinity, ease: 'linear' }}
             className="absolute w-[500px] h-[500px] border border-white rounded-full -top-40 -left-40"
           />
         ))}
@@ -45,7 +45,7 @@ export const CountdownSection = ({ timeLeft }: CountdownSectionProps) => {
             </div>
           ))}
         </div>
-        <p className="text-white/60 text-sm font-bold mt-8">After this, price returns to ₹999</p>
+        <p className="text-white/60 text-sm font-bold mt-8">After this, price returns to ₹199</p>
       </div>
     </section>
   );

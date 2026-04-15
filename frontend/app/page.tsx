@@ -31,6 +31,7 @@ export default function AgooWorkshopLanding() {
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
   const [isHeaderSticky, setIsHeaderSticky] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('about');
   
   const currentYear = new Date().getFullYear();
   const currentMonth = new Date().toLocaleString('default', { month: 'long' });
@@ -49,13 +50,39 @@ export default function AgooWorkshopLanding() {
   useEffect(() => {
     const handleScroll = () => setIsHeaderSticky(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    // --- Intersection Observer for Active Section ---
+    const observerOptions = {
+      root: null,
+      rootMargin: '-45% 0px -45% 0px', // Target the middle 10% of the screen for more precise tracking
+      threshold: 0
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    ['about', 'curriculum', 'instructor', 'benefits', 'faq'].forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      setActiveSection(id);
     }
   };
 
@@ -69,6 +96,7 @@ export default function AgooWorkshopLanding() {
 
       <Header 
         isSticky={isHeaderSticky} 
+        activeSection={activeSection}
         mobileMenuOpen={mobileMenuOpen} 
         setMobileMenuOpen={setMobileMenuOpen} 
         scrollToSection={scrollToSection} 

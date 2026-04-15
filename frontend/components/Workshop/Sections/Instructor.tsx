@@ -13,18 +13,22 @@ export const Instructor = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-white overflow-hidden">
+    <section id="instructor" className="py-24 px-6 bg-white overflow-hidden">
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row items-stretch gap-16 lg:px-12">
+        <div className="flex flex-col lg:flex-row items-center gap-16 lg:px-12">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
             whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
             viewport={{ once: true }}
-            className="flex-1 w-full max-w-md relative flex flex-col"
+            className="flex-1 w-full max-w-md relative"
           >
-            <div className="relative z-10 rounded-3xl bg-violet-50 flex-1 flex items-center justify-center p-12 border-2 border-violet-100 shadow-2xl overflow-hidden">
-              <User size={160} strokeWidth={0.5} className="text-violet-200" />
-              <GraduationCap className="absolute top-10 right-10 w-16 h-16 text-violet-600 bg-white p-3 rounded-2xl shadow-xl" />
+            <div className="relative z-10 rounded-3xl bg-violet-50 aspect-square flex items-center justify-center border-2 border-violet-100 shadow-2xl overflow-hidden group">
+              <img 
+                src="/instructor.png" 
+                alt="Karthik Ramesh - AI Instructor" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+              />
+              <GraduationCap className="absolute top-6 right-6 w-12 h-12 text-violet-600 bg-white p-2 rounded-2xl shadow-xl z-20" />
             </div>
             {/* Abstract background blobs */}
             <div className="absolute -z-10 -top-10 -left-10 w-64 h-64 bg-violet-100/50 rounded-full blur-3xl" />
