@@ -78,7 +78,7 @@ export const PromptShowcase = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16 relative z-10">
           <Badge variant="blue" className="mb-4 !bg-blue-600 !text-white border-none">REAL PROMPTS YOU'LL LEARN</Badge>
-          <h2 className="text-3xl md:text-5xl font-black mb-6">Copy-paste ready templates worth ₹199 alone</h2>
+          <h2 className="text-3xl md:text-5xl font-black mb-6">Copy-paste ready templates worth ₹200 alone</h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">

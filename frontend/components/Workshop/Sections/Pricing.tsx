@@ -7,9 +7,11 @@ import { Card, Button } from '../UI';
 
 interface PricingProps {
   scrollToSection: (id: string) => void;
+  onRegister: () => void;
+  stats: any;
 }
 
-export const Pricing = ({ scrollToSection }: PricingProps) => {
+export const Pricing = ({ scrollToSection, onRegister, stats }: PricingProps) => {
   return (
     <section id="pricing" className="py-32 px-6 bg-gradient-to-b from-violet-50 to-white">
       <div className="container mx-auto text-center">
@@ -28,16 +30,16 @@ export const Pricing = ({ scrollToSection }: PricingProps) => {
         >
           <Card className="p-8 lg:p-10 border-2 border-violet-600 bg-white shadow-2xl relative">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-violet-600 text-white px-6 py-1.5 rounded-full font-black text-xs uppercase tracking-widest shadow-lg">
-              Premiere Batch — 90% OFF
+              Premiere Batch — 50% OFF
             </div>
 
             <div className="mb-10 text-center">
               <div className="flex items-center justify-center gap-3 mb-2">
-                <span className="text-slate-400 line-through text-xl font-bold">₹999</span>
-                <span className="bg-emerald-100 text-emerald-700 text-[10px] font-black px-2 py-0.5 rounded-md uppercase">Save ₹900</span>
+                <span className="text-slate-400 line-through text-xl font-bold">₹200</span>
+                <span className="bg-emerald-100 text-emerald-700 text-[10px] font-black px-2 py-0.5 rounded-md uppercase">Save ₹100</span>
               </div>
               <div className="text-7xl font-black text-slate-900 tracking-tighter">
-                <span className="text-4xl align-top mr-1 text-violet-600">₹</span>99
+                <span className="text-4xl align-top mr-1 text-violet-600">₹</span>100
               </div>
               <p className="text-slate-500 font-bold mt-4 text-sm">One-time payment • Lifetime Value</p>
             </div>
@@ -64,19 +66,19 @@ export const Pricing = ({ scrollToSection }: PricingProps) => {
                   <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
                   <span className="text-[10px] font-black text-red-600 uppercase tracking-widest">Fastest Filling Batch</span>
                 </div>
-                <span className="text-[10px] font-bold text-slate-500">38 / 50 SEATS</span>
+                <span className="text-[10px] font-bold text-slate-500">{stats.total} / {stats.capacity} SEATS</span>
               </div>
               <div className="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden border border-slate-200">
                 <motion.div
                   initial={{ width: 0 }}
-                  whileInView={{ width: '76%' }}
+                  whileInView={{ width: `${stats.percentage}%` }}
                   transition={{ duration: 1.5, ease: "easeOut" }}
                   className="h-full bg-gradient-to-r from-violet-600 to-cyan-500"
                 />
               </div>
             </div>
 
-            <Button variant="gradient" size="lg" className="w-full mb-6 shadow-xl shadow-violet-500/20 group" onClick={() => scrollToSection('pricing')}>
+            <Button variant="gradient" size="lg" className="w-full mb-6 shadow-xl shadow-violet-500/20 group" onClick={onRegister}>
               Register Now <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
 

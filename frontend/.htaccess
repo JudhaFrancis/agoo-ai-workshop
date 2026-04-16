@@ -1,0 +1,15 @@
+# Disable directory indexing to prevent 403 Forbidden errors
+Options -Indexes
+
+# Next.js Proxy Configuration
+# This tells the server to pass all requests to the Node.js process
+RewriteEngine On
+
+# Ensure the request is not for a real file (like an image or CSS)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Forward the request to your Node.js app running on port 3000
+# Note: If your hosting uses a different port, it is usually handled 
+# automatically by the Node.js App Manager once you click 'Start'.
+RewriteRule ^(.*)$ http://127.0.0.1:3000/$1 [P,L]

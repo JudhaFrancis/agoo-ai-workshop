@@ -16,7 +16,7 @@ export const Benefits = () => {
   return (
     <section id="benefits" className="py-24 px-6 bg-white border-y border-slate-100">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-3xl md:text-5xl font-black text-slate-900 text-center mb-16">Everything Included for ₹99</h2>
+        <h2 className="text-3xl md:text-5xl font-black text-slate-900 text-center mb-16">Everything Included for ₹100</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
           {benefits.map((item, i) => (
             <div key={i} className="flex items-center gap-4 group">

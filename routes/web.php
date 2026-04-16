@@ -5,10 +5,13 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-    ]);
+    $url = env('FRONTEND_URL');
+
+    if (empty($url)) {
+        return "Frontend URL not configured. Please check your .env file.";
+    }
+
+    return redirect()->to($url);
 })->name('home');
 
 Route::middleware('auth')->group(function () {

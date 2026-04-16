@@ -45,7 +45,7 @@ export const CountdownSection = ({ timeLeft }: CountdownSectionProps) => {
             </div>
           ))}
         </div>
-        <p className="text-white/60 text-sm font-bold mt-8">After this, price returns to ₹199</p>
+        <p className="text-white/60 text-sm font-bold mt-8">After this, price returns to ₹200</p>
       </div>
     </section>
   );

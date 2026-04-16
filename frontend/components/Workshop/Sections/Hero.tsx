@@ -10,9 +10,11 @@ interface HeroProps {
   currentYear: number;
   typewriterText: string;
   scrollToSection: (id: string) => void;
+  onRegister: () => void;
+  stats: any;
 }
 
-export const Hero = ({ currentMonth, currentYear, typewriterText, scrollToSection }: HeroProps) => {
+export const Hero = ({ currentMonth, currentYear, typewriterText, scrollToSection, onRegister, stats }: HeroProps) => {
   return (
     <section id="about" className="relative lg:min-h-screen pt-32 pb-20 px-6 overflow-hidden bg-gradient-to-b from-[#FDFCFE] to-[#F5F3FF] flex flex-col justify-center">
       <div className="container mx-auto">
@@ -56,8 +58,8 @@ export const Hero = ({ currentMonth, currentYear, typewriterText, scrollToSectio
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button variant="primary" size="lg" className="group shadow-2xl shadow-blue-500/30" onClick={() => scrollToSection('pricing')}>
-                Register Now for ₹99 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1" />
+              <Button variant="primary" size="lg" className="group shadow-2xl shadow-blue-500/30" onClick={onRegister}>
+                Register Now for ₹100 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1" />
               </Button>
               <Button variant="outline" size="lg">
                 <Download className="w-5 h-5 mr-2" /> Download Free Curriculum
@@ -99,17 +101,17 @@ export const Hero = ({ currentMonth, currentYear, typewriterText, scrollToSectio
               <div className="flex items-center justify-between mb-6">
                 <div>
                   <span className="text-slate-400 line-through text-sm font-bold mr-2">₹199</span>
-                  <span className="text-4xl font-black text-violet-600">₹99</span>
+                  <span className="text-4xl font-black text-violet-600">₹100</span>
                 </div>
-                <Badge variant="emerald" className="bg-emerald-50 text-emerald-600 border-none px-3 py-1 uppercase text-[10px] tracking-wider">90% OFF</Badge>
+                <Badge variant="emerald" className="bg-emerald-50 text-emerald-600 border-none px-3 py-1 uppercase text-[10px] tracking-wider">50% OFF</Badge>
               </div>
 
               <div className="mb-6 p-3 bg-violet-50/50 rounded-xl border border-violet-100 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-                  <span className="text-[10px] font-black text-slate-600 uppercase tracking-wider">Only 12 seats left</span>
+                  <span className="text-[10px] font-black text-slate-600 uppercase tracking-wider">Only {stats.seats_left} seats left</span>
                 </div>
-                <span className="text-[10px] font-bold text-violet-600">76% FULL</span>
+                <span className="text-[10px] font-bold text-violet-600">{stats.percentage}% FULL</span>
               </div>
 
               <Button variant="gradient" size="lg" className="w-full mb-4 group" onClick={() => scrollToSection('pricing')}>

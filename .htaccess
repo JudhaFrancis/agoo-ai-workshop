@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # 1. Route API, Storage, and Admin to Laravel
+    RewriteCond %{REQUEST_URI} ^/api/ [OR]
+    RewriteCond %{REQUEST_URI} ^/storage/ [OR]
+    RewriteCond %{REQUEST_URI} ^/admin/
+    RewriteRule ^(.*)$ public/$1 [L]
+
+    # 2. Redirect everything else to Next.js on port 3000
+    # Note: Using [P] requires mod_proxy. If not available, we use a simple redirect.
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ http://127.0.0.1:3000/$1 [P,L]
+</IfModule>

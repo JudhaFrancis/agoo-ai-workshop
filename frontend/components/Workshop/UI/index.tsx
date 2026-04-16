@@ -1,4 +1,9 @@
-import React from 'react';
+'use client';
+
+import React, { useState, Fragment } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown, Check } from 'lucide-react';
+import { Listbox, ListboxButton, ListboxOption, ListboxOptions, Transition } from '@headlessui/react';
 
 export const Button = ({ 
   children, 
@@ -61,10 +66,6 @@ export const Badge = ({ children, className = '', variant = 'blue' }: any) => {
   );
 };
 
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
-import { useState } from 'react';
-
 export const Accordion = ({ items }: { items: { q: string, a: string }[] }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -95,6 +96,47 @@ export const Accordion = ({ items }: { items: { q: string, a: string }[] }) => {
           </AnimatePresence>
         </div>
       ))}
+    </div>
+  );
+};
+
+export const Select = ({ label, options, value, onChange, className = '' }: any) => {
+  return (
+    <div className={`space-y-1.5 ${className}`}>
+      {label && <label className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">{label}</label>}
+      <Listbox value={value} onChange={onChange}>
+        <div className="relative">
+          <ListboxButton className="relative w-full bg-slate-50 border-2 border-slate-100 focus:border-violet-600 rounded-2xl py-3.5 pl-6 pr-10 text-left outline-none transition-all font-medium text-slate-900 group">
+            <span className="block truncate">{value}</span>
+            <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-4">
+              <ChevronDown className="h-5 w-5 text-slate-400 group-data-[open]:rotate-180 transition-transform duration-300" />
+            </span>
+          </ListboxButton>
+          <Transition
+            as={Fragment}
+            leave="transition ease-in duration-100"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <ListboxOptions className="absolute z-50 mt-2 max-h-60 w-full overflow-auto rounded-2xl bg-white p-1 text-base shadow-2xl ring-1 ring-black/5 focus:outline-none sm:text-sm">
+              {options.map((option: string, idx: number) => (
+                <ListboxOption
+                  key={idx}
+                  value={option}
+                  className="group relative cursor-pointer select-none py-3 pl-10 pr-4 rounded-xl text-slate-600 data-[focus]:bg-violet-50 data-[focus]:text-violet-700 transition-colors"
+                >
+                  <span className="block truncate font-medium group-data-[selected]:font-black group-data-[selected]:text-violet-700">
+                    {option}
+                  </span>
+                  <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-violet-600 opacity-0 group-data-[selected]:opacity-100 transition-opacity">
+                    <Check className="h-4 w-4" />
+                  </span>
+                </ListboxOption>
+              ))}
+            </ListboxOptions>
+          </Transition>
+        </div>
+      </Listbox>
     </div>
   );
 };
