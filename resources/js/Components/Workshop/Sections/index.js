@@ -1,0 +1,13 @@
+export { default as Header } from './Header.vue';
+export { default as Hero } from './Hero.vue';
+export { default as CountdownSection } from './CountdownSection.vue';
+export { default as MasteryCards } from './MasteryCards.vue';
+export { default as BeforeAfter } from './BeforeAfter.vue';
+export { default as Curriculum } from './Curriculum.vue';
+export { default as PromptShowcase } from './PromptShowcase.vue';
+export { default as Instructor } from './Instructor.vue';
+export { default as Benefits } from './Benefits.vue';
+export { default as PersonaCards } from './PersonaCards.vue';
+export { default as FAQ } from './FAQ.vue';
+export { default as Pricing } from './Pricing.vue';
+export { default as Footer } from './Footer.vue';

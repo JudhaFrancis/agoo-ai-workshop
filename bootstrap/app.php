@@ -16,7 +16,8 @@ return Application::configure(basePath: dirname(__DIR__))
             'api/workshop/*',
         ]);
 
-        $middleware->web(append: [
+        $middleware->appendToGroup('web', [
+            \App\Http\Middleware\HandleInertiaRequests::class,
             \Illuminate\Http\Middleware\AddLinkHeadersForPreloadedAssets::class,
         ]);
     })
