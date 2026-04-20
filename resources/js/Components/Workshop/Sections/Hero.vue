@@ -14,12 +14,12 @@
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-violet-600"></span>
             </span>
-            <span class="text-xs font-bold uppercase tracking-wider">Live Online • 21 {{ currentMonth }} {{ currentYear }}</span>
+            <span class="text-xs font-bold uppercase tracking-wider">Live Online • May 3rd</span>
           </div>
 
           <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-[1.1] mb-6">
-            Master AI Tools for <br />
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-cyan-600">Daily Work Success</span>
+            How to use AI in <br />
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-cyan-600">Daily Work</span>
           </h1>
 
           <div class="h-12 mb-6">
@@ -42,7 +42,7 @@
 
           <div class="flex flex-col sm:flex-row gap-4 mb-12">
             <Button variant="primary" size="lg" class="group shadow-2xl shadow-blue-500/30" @click="$emit('register')">
-              Register Now for ₹100 <ArrowRight class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              Register Now for ₹99 <ArrowRight class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button variant="outline" size="lg">
               <Download class="w-5 h-5 mr-2" /> Download Free Curriculum
@@ -72,8 +72,8 @@
 
             <div class="flex items-center justify-between mb-6">
               <div>
-                <span class="text-slate-400 line-through text-sm font-bold mr-2">₹199</span>
-                <span class="text-4xl font-black text-violet-600">₹100</span>
+                <span class="text-slate-400 line-through text-sm font-bold mr-2">₹2999</span>
+                <span class="text-4xl font-black text-violet-600">₹99</span>
               </div>
               <Badge variant="emerald" class="bg-emerald-50 text-emerald-600 border-none px-3 py-1 uppercase text-[10px] tracking-wider">50% OFF</Badge>
             </div>

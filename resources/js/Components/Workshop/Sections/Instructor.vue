@@ -28,11 +28,11 @@
           class="flex-1"
         >
           <Badge class="mb-4">YOUR INSTRUCTOR</Badge>
-          <h2 class="text-4xl font-black text-slate-900 mb-2">Karthik Ramesh</h2>
-          <p class="text-xl font-bold text-violet-600 mb-8">AI & Automation Specialist, Agoo Technology</p>
+          <h2 class="text-4xl font-black text-slate-900 mb-2">Mr. Kishore</h2>
+          <p class="text-xl font-bold text-violet-600 mb-8">AI Specialist, Agoo Technology</p>
           
           <p class="text-lg text-slate-600 leading-relaxed mb-10">
-            With 8+ years of experience implementing AI solutions across industries, Karthik has consulted for companies including TCS, Infosys, and leading tech startups. He specializes in making AI practical and accessible for non-technical professionals through hands-on training.
+            With 10 years of experience in AI and technology, Mr. Kishore specializes in helping professionals and businesses leverage AI for productivity and automation. He has a track record of delivering practical, high-impact AI training.
           </p>
 
           <div class="grid grid-cols-3 gap-4 mb-10">
@@ -59,8 +59,8 @@ import { GraduationCap } from 'lucide-vue-next';
 import { Badge } from '../UI';
 
 const statItems = [
-  { val: "8+", label: "AI Experience" },
-  { val: "Expert", label: "Enterprise Consultant" },
-  { val: "Elite", label: "Certification" }
+  { val: "10+", label: "Years AI Experience" },
+  { val: "Expert", label: "AI Automation" },
+  { val: "Elite", label: "Instructor" }
 ];
 </script>

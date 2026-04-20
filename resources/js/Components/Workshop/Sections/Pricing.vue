@@ -21,11 +21,11 @@
 
           <div class="mb-10 text-center">
             <div class="flex items-center justify-center gap-3 mb-2">
-              <span class="text-slate-400 line-through text-xl font-bold">₹200</span>
-              <span class="bg-emerald-100 text-emerald-700 text-[10px] font-black px-2 py-0.5 rounded-md uppercase">Save ₹100</span>
+              <span class="text-slate-400 line-through text-xl font-bold">₹2999</span>
+              <span class="bg-emerald-100 text-emerald-700 text-[10px] font-black px-2 py-0.5 rounded-md uppercase">Save ₹2900</span>
             </div>
             <div class="text-7xl font-black text-slate-900 tracking-tighter">
-              <span class="text-4xl align-top mr-1 text-violet-600">₹</span>100
+              <span class="text-4xl align-top mr-1 text-violet-600">₹</span>99
             </div>
             <p class="text-slate-500 font-bold mt-4 text-sm">One-time payment • Lifetime Value</p>
           </div>

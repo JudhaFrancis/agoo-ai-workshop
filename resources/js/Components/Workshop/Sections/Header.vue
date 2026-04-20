@@ -28,7 +28,7 @@
       <div class="flex items-center gap-4">
         <div class="hidden lg:block">
           <Button @click="scrollToSection('pricing')" variant="primary" size="sm" :class="['group', activeSection === 'pricing' ? 'scale-105' : '']">
-            Register for ₹100 <ArrowRight class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            Register for ₹99 <ArrowRight class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
         <button class="lg:hidden p-2 text-slate-600" @click="$emit('update:mobileMenuOpen', !mobileMenuOpen)">

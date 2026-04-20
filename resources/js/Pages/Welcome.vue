@@ -114,13 +114,13 @@ const toast = ref({
 const currentYear = new Date().getFullYear();
 const currentMonth = new Date().toLocaleString('default', { month: 'long' });
 
-const targetDate = new Date(currentYear, 3, 21); // April 21st
+const targetDate = new Date(currentYear, 4, 3); // May 3rd
 const timeLeft = useCountdown(targetDate);
 
 const typewriterText = useTypewriter([
   "Save 2+ hours every day",
-  "Write better emails in seconds",
-  "Automate repetitive tasks",
+  "Write powerful prompts",
+  "Automate daily tasks",
   "Build a professional resume with AI"
 ]);
 

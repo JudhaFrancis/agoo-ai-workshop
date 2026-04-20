@@ -40,11 +40,10 @@
 import { Badge } from '../UI';
 
 const items = [
-  { time: '0:00–0:20', title: 'Welcome & AI Landscape Overview', desc: 'Understand where AI fits in your workflow and the current state of tools.' },
-  { time: '0:20–0:45', title: 'Prompt Engineering Deep Dive', desc: 'Frameworks, templates, and live demos to get results the first time.' },
-  { time: '0:45–1:10', title: 'Automation Workflows', desc: 'Build your first AI workflow live without writing a single line of code.' },
-  { time: '1:10–1:35', title: 'Content & Resume Creation', desc: 'Live resume rewrite demonstration and AI-powered networking tips.' },
-  { time: '1:35–1:50', title: 'AI Tools Walkthrough & Cheat Sheet', desc: 'Direct comparison of ChatGPT, Claude, and Gemini with our exclusive tools cheat sheet.' },
-  { time: '1:50–2:00', title: 'Live Q&A + Resource Distribution', desc: 'Final Q&A session with the instructor, plus access to prompt templates, certificates, and recordings.' }
+  { time: '0:00–0:25', title: 'How to use AI effectively (not just tool)', desc: 'Master the mindset of AI collaboration beyond just basic tool usage.' },
+  { time: '0:25–0:50', title: 'Writing powerful prompts', desc: 'Craft precision prompts that deliver high-quality results every time.' },
+  { time: '0:50–1:15', title: 'Automating daily tasks', desc: 'Step-by-step guide to offloading repetitive work to intelligent AI workflows.' },
+  { time: '1:15–1:40', title: 'Resume and content creation using AI', desc: 'Transform your professional presence and content velocity with AI assistance.' },
+  { time: '1:40–2:00', title: 'Practical demos with real use cases', desc: 'Watch live as we apply these techniques to solve actual workplace challenges.' }
 ];
 </script>
