@@ -25,7 +25,7 @@
 
     <!-- WhatsApp Button -->
     <a
-      href="https://wa.me/918903489173"
+      href="https://wa.me/918610234644"
       target="_blank"
       rel="noopener noreferrer"
       class="fixed bottom-6 right-6 z-50 p-4 bg-emerald-500 text-white rounded-full shadow-2xl hover:bg-emerald-600 hover:scale-110 transition-all duration-300 group"
@@ -41,7 +41,7 @@
       <div class="flex items-center justify-between gap-4 max-w-md mx-auto">
         <div class="flex flex-col">
           <span class="text-red-600 font-bold text-sm tracking-tight">{{ stats.seats_left }} seats left</span>
-          <span class="text-slate-800 font-black text-lg">₹100</span>
+          <span class="text-slate-800 font-black text-lg">₹99</span>
         </div>
         <Button @click="$emit('scrollToSection', 'pricing')" variant="primary" size="lg" class="flex-1 rounded-xl">
           Register Now →

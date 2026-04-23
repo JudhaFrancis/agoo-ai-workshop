@@ -11,7 +11,7 @@ The backend is built with **Laravel 11**, focusing on a lean and secure API stru
 
 ### Controllers
 - **WorkshopRegistrationController**:
-    - `register()`: Validates user data, creates a Razorpay Order (₹100), and initializes a pending registration record.
+    - `register()`: Validates user data, creates a Razorpay Order (₹99), and initializes a pending registration record.
     - `verifyPayment()`: Cryptographically verifies the Razorpay signature and updates the record to `paid`.
 
 ## API Endpoints

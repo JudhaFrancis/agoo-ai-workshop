@@ -28,7 +28,7 @@ class WorkshopRegistrationController extends Controller
         ]);
 
         try {
-            $amount = 100; // ₹100
+            $amount = 99; // ₹99
             
             $orderData = [
                 'receipt'         => 'rcpt_' . uniqid(),

@@ -15,7 +15,7 @@ The "Agoo AI Workshop" landing page follows a "Standard" premium professional re
 
 ## Payment Flow (Razorpay)
 1. **Initiate**: `RegistrationModal` calls `/api/workshop/register`.
-2. **Checkout**: Opens standard Razorpay checkout interface (₹100).
+2. **Checkout**: Opens standard Razorpay checkout interface (₹99).
 3. **Verify**: Upon success, calls `/api/workshop/verify-payment`.
 4. **Feedback**: Real-time animated toast notifications for success/error states.
 
